@@ -1,0 +1,35 @@
+1. I got a blog template from w3schools.com (- it's a simple design - it's easy to navigate - it's responsive - it's straightforward)
+
+2. I downloaded wamp server and installed it
+	i. there were missing dll files (they showed up during installation and whenever i start the wamp server), so i installed
+	ii. Visual C++ Redistributable for Visual Studio 2012
+	iii. Visual C++ Redistributable for Visual Studio 2010
+	iv. Visual C++ Redistributable for Visual Studio 2013
+	- that solved that challenge
+
+3. I had to reinstall wamp after going through 2.
+
+4. I couldn't remember how to access a page via browser, so i googled it
+	- apparently it's 'localhost/name of folder (inside the www folder)/name of script/file'
+
+5. I downloaded my old code from github (- cocoruns - awalkwithsolzy)... cos i can't remember a lot of what i used to write AND in all honesty, i've lost some of the code
+
+6. I created a menu/top bar
+
+7. I remade the footer
+
+8. I made a homepage
+
+9. I made the posts section
+	- i. cryptocurrency ii. forex iii. synthetic indices
+		i. CRYPTOCURRENCY
+			- i made a page for each post in each category
+			- i made a page to display all of the posts in each category
+	- i made a page to display all of the posts in all categories and a filter to select
+	- i made a page for each tag (not done)
+
+10. I downloaded composer
+
+11. I used command line to install eloquent in a folder and transfered it to my active folder (blog website folder)
+	- i created a start.php & config.php file and edited what needed to be edited
+	- i created the composer.json file and edited what needed to be edited

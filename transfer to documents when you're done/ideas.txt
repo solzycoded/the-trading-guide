@@ -1,0 +1,13 @@
+1. use cloudinary to host the videos and images, that will be downloaded/uploaded
+
+2. no external database, make it all locally stored on the server (this is, so that you'll be done, quickly)
+
+3. create a logo, when you decide on a name
+	- add the logo, so it displays as the websites icon
+
+ELOQUENT
+	4. deleted items in multiple tables, that are related to a key/id
+
+	5. listing multiple items that are related in some way to a key (either as parent/child)
+
+	6. creating functions that link parent db with child db

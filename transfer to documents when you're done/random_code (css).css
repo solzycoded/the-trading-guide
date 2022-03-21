@@ -1,0 +1,15 @@
+/*make an absolute div fill up it's container*/
+.absolutediv {
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+/*make the content of the absolute div, fill up it's container*/
+.absolutediv_child {
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,16 @@
+PAGES:
+	GUEST:
+		1. home/layout
+		2. posts
+		3. posts/category
+		4. posts/category/post
+	ADMIN:
+		1. posts (crud)
+			- categories (crud)
+		2. post (crud)
+			- comments (edit, delete)
+
+	JAVASCRIPT HEIRACHY:
+		ADMIN (folder)
+			- _admin.js
+			- photo.js

@@ -1,0 +1,100 @@
+DBNAME: TRADINGBLOG
+ 
+NO OF TABLES: 8
+
+__________________________
+
+create table categories (
+	id int auto_increment not null primary key,
+	category varchar(20) not null,
+	created_at timestamp
+)CHARSET=utf8;
+
+create table tags (
+	id int auto_increment not null primary key,
+	tag varchar(200) not null,
+	created_at timestamp
+)CHARSET=utf8;
+
+create table posts (
+	id int auto_increment not null primary key,
+	title varchar(400) not null,
+	pic text not null,
+	content text not null,
+	category_id int not null,
+	created_at timestamp,
+	updated_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(category_id) REFERENCES categories(id)
+)CHARSET=utf8;
+
+create table tag_posts (
+	id int auto_increment not null primary key,
+	post_id int not null,
+	tag_id int not null,
+	created_at timestamp,
+	updated_at timestamp,
+	FOREIGN KEY(post_id) REFERENCES posts(id),
+	FOREIGN KEY(tag_id) REFERENCES tags(id)
+)CHARSET=utf8;
+
+create table userroles (
+	id int auto_increment not null primary key,
+	name varchar(40) not null
+)CHARSET=utf8;
+
+create table users (
+	id int auto_increment not null primary key,
+	email varchar(100) not null,
+	name varchar(100) not null,
+	website text,
+	userrole_id int not null,
+	created_at timestamp,
+	updated_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(userrole_id) REFERENCES userroles(id)
+)CHARSET=utf8;
+
+create table admin(
+	id int auto_increment not null primary key,
+	email varchar(100) not null,
+	password varchar(40) not null,
+	user_id int not null,
+	created_at timestamp,
+	updated_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(user_id) REFERENCES users(id)
+)
+
+create table users (
+	id int auto_increment not null primary key,
+	email varchar(100) not null,
+	name varchar(100) not null,
+	website text,
+	userrole_id int not null,
+	created_at timestamp,
+	updated_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(userrole_id) REFERENCES userroles(id)
+)CHARSET=utf8;
+
+create table comments (
+	id int auto_increment not null primary key,
+	user_id int not null,
+	post_id int not null,
+	comment text not null,
+	created_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(user_id) REFERENCES users(id),
+	FOREIGN KEY(post_id) REFERENCES posts(id)
+)CHARSET=utf8;
+
+create table replies (
+	id int auto_increment not null primary key,
+	comment_id int not null,
+	reply_id int not null,
+	created_at timestamp,
+	deleted_at timestamp,
+	FOREIGN KEY(comment_id) REFERENCES comments(id),
+	FOREIGN KEY(reply_id) REFERENCES comments(id)
+)CHARSET=utf8;
